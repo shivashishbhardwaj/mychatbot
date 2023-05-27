@@ -88,7 +88,7 @@ def test_embed():
 st.title("My PDF Bot ")
 st.markdown(
     """ 
-        ####  🗨️ Chat with your PDF files 📜 with `Conversational Buffer Memory`  
+        ####  🗨️ Chat with your PDF files 📜 
         > *powered by [LangChain]('https://langchain.readthedocs.io/en/latest/modules/memory.html#memory') + 
         [OpenAI]('https://platform.openai.com/docs/models/gpt-3-5') + [DataButton](https://www.databutton.io/)*
         ----
@@ -119,7 +119,7 @@ st.sidebar.markdown(
 )
 
 # Allow the user to upload a PDF file
-uploaded_file = st.file_uploader("**Upload Your PDF File**", type=["pdf"], accept_multiple_files=True)
+uploaded_file = st.file_uploader("**Upload Your PDF File**")
 
 if uploaded_file:
     st.write("Filename: ", uploaded_file.name)
