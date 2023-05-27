@@ -122,6 +122,7 @@ st.sidebar.markdown(
 uploaded_file = st.file_uploader("**Upload Your PDF File**", type=["pdf"], accept_multiple_files=True)
 
 if uploaded_file:
+    st.write("Filename: ", uploaded_file.name)
     name_of_file = uploaded_file.name
     doc = parse_pdf(uploaded_file)
     pages = text_to_docs(doc)
